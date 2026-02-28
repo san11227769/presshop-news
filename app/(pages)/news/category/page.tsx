@@ -48,12 +48,12 @@ export default function NewsPage() {
         );
     }
 
-    const newsArticles = data?.newsArray || [];
+    const newsArticles = data?.news || [];
     const displayArticles = newsArticles;
 
     // Show "Load more" if server returned exactly `limit` items (more may exist)
-    const canLoadMore = (data?.newsArray?.length ?? 0) === 0;
-
+    //  const canLoadMore = (data?.newsArray?.length ?? 0) === 0;
+    const canLoadMore = newsArticles.length === limit;
     return (
         <section>
             <div className="w-full px-4 lg:px-6 py-2 lg:py-10">
