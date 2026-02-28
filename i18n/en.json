@@ -1,0 +1,25 @@
+{
+    "app": {
+        "title": "News Aggregator",
+        "welcome": "Welcome to News Aggregator",
+        "description": "A modern news aggregation platform with real-time updates and multi-language support."
+    },
+    "language": {
+        "select": "Select Language",
+        "english": "English",
+        "hindi": "Hindi"
+    },
+    "api": {
+        "loading": "Loading data...",
+        "error": "Error loading data",
+        "success": "Data loaded successfully",
+        "fetchButton": "Fetch Sample Data"
+    },
+    "socket": {
+        "connecting": "Connecting to server...",
+        "connected": "Connected to server",
+        "disconnected": "Disconnected from server",
+        "message": "Socket Message",
+        "noMessages": "No messages yet"
+    }
+}
