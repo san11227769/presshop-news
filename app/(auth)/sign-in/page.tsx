@@ -1,7 +1,9 @@
-export default function SignInPage() {
+import React from 'react'
+
+function signIn() {
     return (
-        <div>
-            <h1>Sign In</h1>
-        </div>
-    );
+        <div>sign in page</div>
+    )
 }
+
+export default signIn

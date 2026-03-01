@@ -61,7 +61,7 @@ export const useLogin = (
       queryClient.setQueryData(queryKeys.auth.user(), data.user);
 
       // Call custom onSuccess if provided
-      options?.onSuccess?.(data, variables, context);
+      options?.onSuccess?.(data, variables, context, undefined as any);
     },
     ...options,
   });
@@ -91,7 +91,7 @@ export const useRegister = (
       queryClient.setQueryData(queryKeys.auth.user(), data.user);
 
       // Call custom onSuccess if provided
-      options?.onSuccess?.(data, variables, context);
+      options?.onSuccess?.(data, variables, context, undefined as any);
     },
     ...options,
   });
@@ -110,12 +110,12 @@ export const useLogout = (
     onSuccess: (data, variables, context) => {
       // Clear all query data
       queryClient.clear();
-      
+
       // Remove auth-related data
       queryClient.removeQueries({ queryKey: queryKeys.auth.all });
 
       // Call custom onSuccess if provided
-      options?.onSuccess?.(data, variables, context);
+      options?.onSuccess?.(data, variables, context, undefined as any);
     },
     ...options,
   });
@@ -158,7 +158,7 @@ export const useRefreshToken = (
       }
 
       // Call custom onSuccess if provided
-      options?.onSuccess?.(data, variables, context);
+      options?.onSuccess?.(data, variables, context, undefined as any);
     },
     ...options,
   });
@@ -208,7 +208,7 @@ export const useUpdateProfile = (
       }
 
       // Call custom onSuccess if provided
-      options?.onSuccess?.(data, variables, context);
+      options?.onSuccess?.(data, variables, context, undefined as any);
     },
     ...options,
   });
@@ -221,7 +221,7 @@ export const useUpdateProfile = (
 export const useIsAuthenticated = (): boolean => {
   const queryClient = useQueryClient();
   const user = queryClient.getQueryData<User>(queryKeys.auth.user());
-  
+
   // Also check localStorage as fallback
   if (!user && typeof window !== "undefined") {
     const storedUser = localStorage.getItem("user");

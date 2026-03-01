@@ -35,7 +35,8 @@ export interface NewsArticle {
 }
 
 export interface NewsResponse {
-  news?: NewsArticle[];
+
+  newsArray?: NewsArticle[];
   available?: number;
   total?: number;
   page?: number;
