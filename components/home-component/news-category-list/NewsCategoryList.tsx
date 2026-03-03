@@ -1,6 +1,5 @@
 import NewsCategoryListCard from '@/components/news-category-list-card/NewsCategoryListCard'
 import { categoryData } from '@/data/category'
-import { ArrowBigDown, ArrowBigRight, ChevronRight } from 'lucide-react'
 import {
     Carousel,
     CarouselContent,

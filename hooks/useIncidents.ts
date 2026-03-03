@@ -31,7 +31,7 @@ export function useIncidents({ userId, joinAs }: UseIncidentsProps) {
 
   useEffect(() => {
     // fetch initial incidents
-    fetch(`${process.env.NEXT_PUBLIC_BASE_URL}mediahouse/getAlertIncidents`)
+    fetch(`${"https://dev-api.presshop.news:5019/"}mediahouse/getAlertIncidents`)
       .then(r => r.json())
       .then(data => setIncidents(data || []))
       .catch(err => console.error(err));
